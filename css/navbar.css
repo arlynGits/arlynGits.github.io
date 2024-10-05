@@ -1,0 +1,91 @@
+*{
+}
+
+:root {
+    --color-white: #fff;
+    --color-black:#000000;
+    --color-background: #86469C;
+    --color-lighter-bg:#BC7FCD;
+    --color-even-lighter:#FB9AD1;
+    --color-pink:#FFCDEA;
+}
+
+body{
+    margin-top: 0;
+    padding: 1;
+    margin-left: 0;
+    margin-bottom: 1000px;
+    margin-right: 0;
+}
+
+.navbar {
+    color: #edf2f4;
+    display: flex;
+    margin: auto;
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: var(--color-background);
+}
+
+.navbar h1 {
+    margin-left: 7%;
+    font-family:"Poppins";
+    font-size: 25px;
+    color: var(--color-white);
+    background-image: linear-gradient(
+    to right,
+    var(--color-even-lighter),
+    var(--color-white) 50%,
+    var(--color-lighter-bg) 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: flex;
+    justify-items: center;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+.navbar h1:before{
+    content: '';
+    background: var(--color-even-lighter);
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar h1:hover {
+    cursor: pointer;
+    background-position: 0;
+}
+   
+.navbar h1:hover::before{
+     width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.menu li, .menu a {
+    text-decoration: none;
+    color: var(--color-white);
+    list-style-type: none;
+    font-family: "Poppins";
+}
+
